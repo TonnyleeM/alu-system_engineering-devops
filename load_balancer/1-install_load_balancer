@@ -15,12 +15,12 @@ sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
 # sudo truncate -s 0 /etc/haproxy/haproxy.cfg
 
 # Check if the configuration for frontend and backend exists
-if ! grep -q "frontend sarah-frontend" /etc/haproxy/haproxy.cfg; then
+if ! grep -q "frontend tonny-frontend" /etc/haproxy/haproxy.cfg; then
     # Add frontend and backend configuration
-    server_config="frontend sarah-frontend
+    server_config="frontend tonny-frontend
         bind *:80
         mode http
-        default_backend sarah-backend
+        default_backend tonny-backend
 
     backend sarah-backend
         balance roundrobin
