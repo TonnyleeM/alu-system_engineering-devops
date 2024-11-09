@@ -24,8 +24,8 @@ if ! grep -q "frontend sarah-frontend" /etc/haproxy/haproxy.cfg; then
 
     backend sarah-backend
         balance roundrobin
-        server 6342-web-01 34.204.44.250:80 check
-        server 6342-web-02 34.234.75.159:80 check"
+        server 6342-web-01 34.228.143.1:80 check
+        server 6342-web-02 3.88.41.228:80 check"
     
     # Append the configuration to haproxy.cfg
     echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
